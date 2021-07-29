@@ -11,7 +11,7 @@ From the [overview](https://www.kaggle.com/c/pkdd-15-predict-taxi-service-trajec
 >
 > In this challenge, we ask you to build a predictive framework that is able to infer the final destination of taxi rides in Porto, Portugal based on their (initial) partial trajectories. The output of such a framework must be the final trip's destination (WGS84 coordinates).
 
-The dataset is a `csv` file, one of whose columns &mdash; `POLYLINE` &mdash; contains a *string* initial partial trajectories of taxi trips in the form of lists of pairs of longitude/latitude GPS coordinates:
+The dataset is a `csv` file, one of whose columns &mdash; `POLYLINE` &mdash; contains a initial partial trajectory strings of taxi trips, in the form of lists of pairs of longitude/latitude coordinates:
 ```
 "[[-8.585676,41.148522],[-8.585712,41.148639],[-8.585685,41.148855],[-8.58573,41.148927],[-8.585982,41.148963],[-8.586396,41.148954],[-8.586072,41.14872],[-8.586324,41.147847],[-8.586999,41.14746],[-8.586576,41.147154],[-8.584884,41.146623]]"
 ```
@@ -22,4 +22,5 @@ The dataset is a `csv` file, one of whose columns &mdash; `POLYLINE` &mdash; con
 2. Add columns `first_long`, `first_lat`, `last_long`, `last_lat`, with datatype `float`, containing the first and last reported positions for each trip.
 3. Prepare a "baseline" submission file (see `sampleSubmission.csv` for the format) where the prediction fo a trip's final destination is, simply, it's last reported position.
 4. Submit your submission file to Kaggle. Here's the [submission link](https://www.kaggle.com/c/pkdd-15-predict-taxi-service-trajectory-i/submit). Where, on the leader board, does this na&iuml;ve approach land you?
+5. [extra credit] Add a column to `df` with the distance, in kilometers, of each partial trajectory.
 
